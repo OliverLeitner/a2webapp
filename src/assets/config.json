@@ -1,0 +1,6 @@
+{
+    "url": "http://angular.neverslair-blog.net:4020/rand.php",
+    "max_tries": 10,
+    "title": "Hangman",
+    "fill_char": "_"
+}

@@ -1,0 +1,20 @@
+<div class="elem">
+    <h1 class="elem_title">{{config.title}}</h1>
+<div class="elem_text">
+    <div id="max_tries">Maximum tries: {{config.max_tries}}</div>
+    <form *ngIf="!maxReached && !isValid" id="form" method="post" enctype="application/x-www-form-urlencoded" (ngSubmit)="onSubmit($event)">
+        <fieldset>
+            <label for="word">Word: <input type="text" class="form-control" id="word" required [(ngModel)]="output.filler" name="word"></label>
+            <button class="btn btn-default">Submit</button>
+        </fieldset>
+    </form>
+    <div *ngIf="!maxReached && !isValid" id="info">
+        <button class="btn btn-default" (click)="showWord()">Show Word</button>
+        <p *ngIf="showit" id="the_word">{{output.word}}</p>
+        <p id="hint">{{output.hint}}</p>
+    </div>
+    <valid-out [time_spent]="time_spent" [isValid]="isValid"></valid-out>
+    <failed [cur_try]="cur_try" [isFailed]="isFailed"></failed>
+    <game-over [cur_try]="cur_try" [maxReached]="maxReached"></game-over>
+</div>
+</div>

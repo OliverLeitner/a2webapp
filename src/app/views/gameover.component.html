@@ -1,0 +1,8 @@
+<div *ngIf="maxReached" id="reload">
+    <h2>Game over!</h2>
+    <p>You have reached the maximum number of tries.</p>
+    <p id="new_game_loose">
+        <button (click)="this.functions.resetGame()">New Game!</button>
+    </p>
+</div>
+

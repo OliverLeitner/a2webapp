@@ -1,0 +1,79 @@
+//define some base coloring
+@bg:            #A0A0A0;
+@fg:            #FFF2Af; 
+@black:         #000;
+@white:         #FFF;
+@red:           #FF8000;
+@lgrey:         #BEBEBE;
+
+//font default family
+@ffamily:       verdana, tahoma;
+
+//all buttons -> same height
+button {
+    height: 35px;
+}
+
+.font-style (@family, @size: 20pt) {
+    font-family: @family;
+    font-size: @size;
+}
+
+//encapsulation where possible...
+body {
+    margin: 0;
+    padding: 0;
+    background-color: darken(@bg, 20%);
+    .font-style (@ffamily);
+    div.elem {
+        width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: @white;
+        h1.elem_title {
+            font-size: 2em;
+            text-align: center;
+            text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+        }
+        div.elem_text {
+            div#max_tries {
+                font-size: 0.7em;
+            }
+            fieldset {
+                float:left;
+                width: 94%;
+                margin-top: 10px;
+                padding-top: 21px;
+                label {
+                    input {
+                        background-color: @fg;
+                        font-size: 1em;
+                        width: 250px;
+                    }
+                }
+                button {
+                    position: relative;
+                    top: -6px;
+                    margin-left: 10px;
+                }
+            }
+            div#info {
+                button {
+                    margin-top: 25px;
+                }
+                p#the_word {
+                    margin:0;
+                    padding:0;
+                    border: 1px solid;
+                    text-align: center;
+                    line-height: 62px;
+                    background-color: @lgrey;
+                }
+                p#hint {
+                    border: 2px dotted @red;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

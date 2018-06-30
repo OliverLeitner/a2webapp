@@ -1,0 +1,6 @@
+<div *ngIf="isValid" id="success">
+    <h2>Thank you!</h2>
+    <p>You entered the correct word.</p>
+    <p>Game took: <span id="time">{{time_spent}}</span> seconds.</p>
+    <button (click)="this.functions.resetGame()">New Game!</button>
+</div>
