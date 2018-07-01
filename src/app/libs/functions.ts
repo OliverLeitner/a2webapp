@@ -33,11 +33,14 @@ export class GlobalFunctions {
      * starting a new game
      */
     public resetGame = (() : void => {
+        //this is the best solution
+        //to reload???
         window.location.reload();
     });
 
     /**
      * time spent playing
+     * returns string of seconds since game started.
      */
     public timeSpent = ((start_time : Date) : string => {
         let endDate = new Date();
