@@ -10,3 +10,8 @@ just some sample angular 6 thingy again...
 2. cd a2webapp
 3. npm update (initiializes the npm modules...)
 3. ng serve (build, build --prod, --host ... choose your poison...)
+
+# changing the json target...
+the expected json format is:
+
+{"WORD1":"some text","WORD2":"some other text.", ...}
