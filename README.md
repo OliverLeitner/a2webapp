@@ -15,3 +15,9 @@ just some sample angular 6 thingy again...
 the expected json format is:
 
 {"WORD1":"some text","WORD2":"some other text.", ...}
+
+the interface should return a single word and a single text in the form:
+
+{"WORD":"some text"}
+
+the randomization at this point is done on serverside, cause thats faster...
